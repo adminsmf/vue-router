@@ -17,14 +17,16 @@ export default class VueRouter {
   init(app) {
     // app指的是根实例
     const history = this.history;
+
+    const setupListeners = () => {
+      history.setupListeners();
+    };
+
     history.transitionTo(history.getCurrentLocation(), setupListeners);
 
     history.listen((route) => {
       app._route = route;
     });
-    const setupListeners = () => {
-      history.setupListeners();
-    };
   }
   // 用来匹配路径
   match(location) {
