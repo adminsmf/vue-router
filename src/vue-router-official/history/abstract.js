@@ -3,9 +3,6 @@ import { History } from './base'
 import { NavigationFailureType, isNavigationFailure } from '../util/errors'
 
 export class AbstractHistory extends History {
-  index
-  stack
-
   constructor (router, base) {
     super(router, base)
     this.stack = []

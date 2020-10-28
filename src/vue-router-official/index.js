@@ -19,20 +19,6 @@ export default class VueRouter {
   static version
   static isNavigationFailure
   static NavigationFailureType
-
-  app
-  apps
-  ready
-  readyCbs
-  options
-  mode
-  history
-  matcher
-  fallback
-  beforeHooks
-  resolveHooks
-  afterHooks
-
   constructor (options = {}) {
     this.app = null
     this.apps = []
@@ -41,6 +27,7 @@ export default class VueRouter {
     this.resolveHooks = []
     this.afterHooks = []
     this.matcher = createMatcher(options.routes || [], this)
+    console.log('matcher', this.matcher)
 
     let mode = options.mode || 'hash'
     this.fallback =
@@ -125,6 +112,7 @@ export default class VueRouter {
         history.setupListeners()
         handleInitialScroll(routeOrError)
       }
+      console.log('history', history)
       history.transitionTo(
         history.getCurrentLocation(),
         setupListeners,

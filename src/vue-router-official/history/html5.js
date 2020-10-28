@@ -6,8 +6,6 @@ import { setupScroll, handleScroll } from '../util/scroll'
 import { pushState, replaceState, supportsPushState } from '../util/push-state'
 
 export class HTML5History extends History {
-  _startLocation
-
   constructor (router, base) {
     super(router, base)
 

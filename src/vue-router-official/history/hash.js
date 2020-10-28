@@ -1,4 +1,3 @@
-import Router from '../index'
 import { History } from './base'
 import { cleanPath } from '../util/path'
 import { getLocation } from './html5'

@@ -19,6 +19,7 @@ const routes = [
     children: [
       {
         path: "a",
+        name: 'AboutA',
         component: {
           render(h) {
             return <h1>about a</h1>;
@@ -27,6 +28,7 @@ const routes = [
       },
       {
         path: "b",
+        name: 'AboutB',
         component: {
           render(h) {
             return <h1>about b</h1>;

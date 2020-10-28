@@ -1,5 +1,4 @@
 import { _Vue } from '../install'
-import Router from '../index'
 import { inBrowser } from '../util/dom'
 import { runQueue } from '../util/async'
 import { warn } from '../util/warn'
@@ -20,26 +19,6 @@ import {
 } from '../util/errors'
 
 export class History {
-  router
-  base
-  current
-  pending
-  cb
-  ready
-  readyCbs
-  readyErrorCbs
-  errorCbs
-  listeners
-  cleanupListeners
-
-  // implemented by sub-classes
-  go
-  push
-  replace
-  ensureURL
-  getCurrentLocation
-  setupListeners
-
   constructor (router, base) {
     this.router = router
     this.base = normalizeBase(base)

@@ -66,8 +66,7 @@ function addRouteRecord (
     )
   }
 
-  const pathToRegexpOptions =
-    route.pathToRegexpOptions || {}
+  const pathToRegexpOptions = route.pathToRegexpOptions || {}
   const normalizedPath = normalizePath(path, parent, pathToRegexpOptions.strict)
 
   if (typeof route.caseSensitive === 'boolean') {
